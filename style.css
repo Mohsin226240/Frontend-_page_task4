@@ -1,0 +1,109 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --primary: #6c63ff;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --blur: blur(10px);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #a18cd1, #fbc2eb);
+  padding-top: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.glass {
+  background-color: var(--glass-bg);
+  border-radius: 1rem;
+  backdrop-filter: var(--blur);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+  background-color: #5247d9;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+body.dark-mode .feature-card {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.stat h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.counter {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-cta {
+    margin-top: 15px;
+  }
+}
